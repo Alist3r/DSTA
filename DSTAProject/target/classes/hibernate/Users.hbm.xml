@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-mag-2014 12.24.50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="DSTAProject.model.Users" table="users" catalog="DSTAProjectDB">
+        <id name="idUsers" type="java.lang.Integer">
+            <column name="idUsers" />
+            <generator class="identity" />
+        </id>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="psw" type="string">
+            <column name="psw" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

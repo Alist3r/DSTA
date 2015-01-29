@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-mag-2014 12.24.50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="DSTAProject.model.Characters" table="characters" catalog="DSTAProjectDB">
+        <id name="idChar" type="java.lang.Integer">
+            <column name="idChar" />
+            <generator class="identity" />
+        </id>
+        <property name="idUsers" type="java.lang.Integer">
+            <column name="idUsers"/>
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="30" />
+        </property>
+        <property name="level" type="java.lang.Integer">
+            <column name="level"/>
+        </property>
+        <property name="souls" type="java.lang.Integer">
+            <column name="souls"/>
+        </property>
+        <property name="maxHP" type="java.lang.Integer">
+            <column name="maxHP"/>
+        </property>
+        <property name="currHP" type="java.lang.Integer">
+            <column name="currHP"/>
+        </property>
+        <property name="attacco" type="java.lang.Integer">
+            <column name="attacco"/>
+        </property>
+        <property name="difesa" type="java.lang.Integer">
+            <column name="difesa"/>
+        </property>
+        <property name="velocita" type="java.lang.Integer">
+            <column name="velocita"/>
+        </property>
+        <property name="armatura" type="java.lang.Integer">
+            <column name="armatura"/>
+        </property>
+    </class>
+</hibernate-mapping>
