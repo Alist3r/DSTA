@@ -35,7 +35,7 @@
 		
 		 	<div id="titleDiv" hidden="hidden">
 			 	<div class="divCenterText" style="font-size: 60px; padding-top: 200px; font-family: 'Playfair Display', serif;">
-			 		T E X T SOULS HOLLAAAAAA
+			 		T E X T SOULS
 			 	</div>
 			 	<div class="divCenterText">
 			 		D a r k S o u l s A d v e n t u r e E d i t i o n
