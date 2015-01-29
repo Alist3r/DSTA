@@ -49,6 +49,7 @@ public class UsersController {
 						character = new Characters();
 						character.setName("Alist3r");
 						character.setIdUsers(user.getIdUsers());
+						charactersBo.save(character);
 					}
 					
 					model.addAttribute("character", character);
