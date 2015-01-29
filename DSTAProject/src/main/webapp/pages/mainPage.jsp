@@ -20,6 +20,9 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
+
+			var music = document.getElementById("themeMusic");
+			music.volume = 0.1;
 			
 			$('#footer').fadeIn( 2000 );
 			$('#header').hide().fadeIn( 2000 );
@@ -69,6 +72,20 @@
 				
 				return false;
 			});
+
+			$("#controlMusic").click( function() {	
+				
+				if(music.paused == true) {
+					music.play()
+					$("#controlMusic").attr({'class': 'fa fa-volume-up' })
+				}
+				else {
+					music.pause();
+					$("#controlMusic").attr({'class': 'fa fa-volume-off' })
+				}
+
+				
+			});
 		
 								
 		});
@@ -80,6 +97,10 @@
 		<div id="dialog"></div>
 		
 		<div class="wrapper">
+		
+			<audio id="themeMusic" autoplay="autoplay" loop="loop">  
+        			<source src="music/Majula-Extended.mp3" type="audio/mp3" />
+			</audio>
 		
 		 	<jsp:include page="componenti/header.jsp"></jsp:include>	
 		 	
@@ -101,6 +122,7 @@
 						<td class="tdNavBar" style="border-right: none; text-align: center;">
 							<button id="inventario" class="customNavButton"><%= character.getName() %></button>
 						</td>
+						<td> <i id="controlMusic" style="color:white; cursor:pointer;" class="fa fa-volume-up"></i> <a></a>
 					</tr>
 				</table>
 			</div>

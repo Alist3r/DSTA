@@ -33,6 +33,7 @@
 	 		<div id="mainDiv" hidden="hidden">
 			 	
 			 	<jsp:include page="componenti/header.jsp"></jsp:include>
+			 
 			 	
 			 	<form action="doLogin.htm" method="POST">	
 			 	

@@ -31,7 +31,7 @@
 	</script>	
 		
 	<body>
-		<div class="wrapper">
+		<div class="wrapper"> 
 		
 		 	<div id="titleDiv" hidden="hidden">
 			 	<div class="divCenterText" style="font-size: 60px; padding-top: 200px; font-family: 'Playfair Display', serif;">
