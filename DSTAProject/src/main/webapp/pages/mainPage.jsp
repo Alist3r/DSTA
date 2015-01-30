@@ -7,7 +7,7 @@
 
 <% 	
 	Users user = (Users) session.getAttribute(DSTAConstants.SESSION_USER);
-    Characters character = (Characters) session.getAttribute("character");
+    Characters character = (Characters) session.getAttribute(DSTAConstants.SESSION_CHAR);
 
 	if (user != null) {
 %>
@@ -21,14 +21,16 @@
 		
 		$(document).ready(function() {
 
+			//CONTROLLO DELLA MUSICA
 			var music = document.getElementById("themeMusic");
 			music.volume = 0.1;
-			
+
+			//TRANSAZIONE COMPONENTI
 			$('#footer').fadeIn( 2000 );
 			$('#header').hide().fadeIn( 2000 );
 			$('#navBar').hide().fadeIn( 2000 );
 			
-			
+			//CREO IL DIALOG
 			$("#dialog").dialog({
 				modal:false,
 				draggable:false,
@@ -58,9 +60,11 @@
                   }
                                          
 			});
-			
+
+			//CAMBIO IL TESTO DEL BOTTONE DI CHIUSURA DEL DIALOG
 			$('.ui-dialog .ui-button-text:contains(close)').text('Chiudi');
-					
+
+			//FUNZIONE DI CLICK PER APERTURA/CHIUSURA DELLA SCHERMATA DEL PERSONAGGIO
 			$("#inventario").click( function() {	
 				
 				if($('#dialog').dialog( "isOpen" )) {
@@ -73,6 +77,7 @@
 				return false;
 			});
 
+			//PLAY/PAUSE DELLA MUSICA
 			$("#controlMusic").click( function() {	
 				
 				if(music.paused == true) {
@@ -130,7 +135,7 @@
 		 	
 		 	<div id="paginaPrincipale" style="border: 1px solid black; width: 38%; margin: 0 auto; margin-top: 10px; height: 87%">
 		 		
-		 		
+		 		<jsp:include page="story/begin/createCharacter.jsp"></jsp:include>
 		 	
 		 	</div>
 		 	

@@ -67,7 +67,7 @@ public class CharactersDaoImpl implements CharactersDao {
 		
 		session = sessionFactory.openSession();
 		
-		String hql = "FROM Characters TabChar, Users TabUser "
+		String hql = "SELECT TabChar FROM Characters TabChar, Users TabUser "
 		           + "WHERE TabUser.email= :email AND "
 		       	   + "      TabChar.idUsers = TabUser.idUsers ";
 
@@ -78,8 +78,10 @@ public class CharactersDaoImpl implements CharactersDao {
 		@SuppressWarnings("unchecked")
 		List<Characters> characterFound = (List<Characters>) query.list();
 
+		session.close();
+		
 		if (characterFound != null && characterFound.size() == 1) {
-			session.close();
+	
 			return characterFound.get(0);
 		}
 		

@@ -17,7 +17,7 @@ import DSTAProject.utils.DSTAConstants;
 
 
 @Controller
-@SessionAttributes({ DSTAConstants.SESSION_USER,"character"})
+@SessionAttributes({ DSTAConstants.SESSION_USER, DSTAConstants.SESSION_CHAR})
 public class UsersController {
 	
 	@Autowired
@@ -26,6 +26,7 @@ public class UsersController {
 	@Autowired
 	CharactersBo charactersBo;
 	
+	//PROCEDURA DI LOGIN
 	@RequestMapping(value = "/doLogin", method = RequestMethod.POST)
 	public ModelAndView login(
 			@RequestParam(DSTAConstants.PARAM_EMAIL) String email,
@@ -33,18 +34,17 @@ public class UsersController {
 			Model model) {
 
 		try {
+			
+			//CERCO L'UTENTE NEL DATABASE
 			Users user = usersBo.checkLogin(email, psw);
 			
-			System.out.println("Entrato Login");
-			
+			//SE TROVO L'UTENTE
 			if (user != null) {
-			
-					// aggiunge l'attributo in request.
-					model.addAttribute(DSTAConstants.SESSION_USER, user);
-					model.addAttribute("msg", "Utente Trovato");
-					
+							
+				    //CERCO UN PERSONAGGIO ASSOCIATO ALL'UTENTE
 					Characters character = charactersBo.getByEmail(user.getEmail());
 					
+					//SE NON TROVO NESSUN PERSONAGGIO NE CREO UNO NUOVO E LO SALVO NEL DATABASE
 					if(character == null) {
 						character = new Characters();
 						character.setName("Alist3r");
@@ -52,14 +52,17 @@ public class UsersController {
 						charactersBo.save(character);
 					}
 					
-					model.addAttribute("character", character);
+					//SALVO NELLA SESSIONE L'UTENTE IL PERSONAGGIO
+					model.addAttribute(DSTAConstants.SESSION_CHAR, character);
+					model.addAttribute(DSTAConstants.SESSION_USER, user);
+					model.addAttribute("page", "story/begin/createCharacter.jsp");
 
 					return new ModelAndView("mainPage");
 
 			} 
+			//SE NON TROVO NESSUN UTENTE RESTITUISCO MESSAGGIO DI ERRORE
 			else {
 				model.addAttribute("msg","Utente non Trovato o Password Errata.");
-				System.out.println("Utente non Trovato o password errata.rore");
 				return new ModelAndView("login");
 			}
 		} 

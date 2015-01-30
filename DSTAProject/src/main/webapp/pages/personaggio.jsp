@@ -1,9 +1,10 @@
 
+<%@page import="DSTAProject.utils.DSTAConstants"%>
 <%@page import="DSTAProject.utils.DSTAUtils"%>
 <%@page import="DSTAProject.model.Characters"%>
 
 <%
-Characters character = (Characters) session.getAttribute("character");
+Characters character = (Characters) session.getAttribute(DSTAConstants.SESSION_CHAR);
 
 Integer maxHP    = character.getMaxHP();
 Integer currHP   = character.getCurrHP();
