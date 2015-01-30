@@ -39,6 +39,8 @@
 
 				<value>/hibernate/Users.hbm.xml</value>
 				<value>/hibernate/Characters.hbm.xml</value>
+				<value>/hibernate/Story_Point.hbm.xml</value>
+				<value>/hibernate/Progresses.hbm.xml</value>
 
 			</list>
 		</property>
@@ -67,32 +69,16 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<!-- - 
-	
-	<bean id="utenteDao"
-		class="followMeWeb.dao.impl.UtenteDaoImpl">
+	<bean id="progressesDao"
+		class="DSTAProject.dao.impl.ProgressesDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<bean id="richiestaDao"
-		class="followMeWeb.dao.impl.RichiestaDaoImpl">
+	<bean id="storyPointDao"
+		class="DSTAProject.dao.impl.StoryPointDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<bean id="amiciziaDao"
-		class="followMeWeb.dao.impl.AmiciziaDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
-	
-	<bean id="bloccatoDao"
-		class="followMeWeb.dao.impl.BloccatoDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
-	
-	<bean id="tracciaDao"
-		class="followMeWeb.dao.impl.TracciaDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean> -->
 	
 	<!-- ********************************************************* -->
 	<!-- ** BO BEAN ** -->
@@ -108,32 +94,15 @@
 		<property name="charactersDao" ref="charactersDao" />
 	</bean>
 	
-	<!-- - 
-	
-	<bean id="utenteBo"
-		class="followMeWeb.bo.impl.UtenteBoImpl">
-		<property name="utenteDao" ref="utenteDao" />
+	<bean id="progressesBo"
+		class="DSTAProject.bo.impl.ProgressesBoImpl">
+		<property name="progressesDao" ref="progressesDao" />
 	</bean>
 	
-	<bean id="richiestaBo"
-		class="followMeWeb.bo.impl.RichiestaBoImpl">
-		<property name="richiestaDao" ref="richiestaDao" />
+	<bean id="storyPointBo"
+		class="DSTAProject.bo.impl.StoryPointBoImpl">
+		<property name="storyPointDao" ref="storyPointDao" />
 	</bean>
-	
-	<bean id="amiciziaBo"
-		class="followMeWeb.bo.impl.AmiciziaBoImpl">
-		<property name="amiciziaDao" ref="amiciziaDao" />
-	</bean>
-	
-	<bean id="bloccatoBo"
-		class="followMeWeb.bo.impl.BloccatoBoImpl">
-		<property name="bloccatoDao" ref="bloccatoDao" />
-	</bean>
-	
-	<bean id="tracciaBo"
-		class="followMeWeb.bo.impl.TracciaBoImpl">
-		<property name="tracciaDao" ref="tracciaDao" />
-	</bean> -->
 	
 	<!-- ********************************************************* -->
 	<!-- ** BEAN ** -->
@@ -147,26 +116,13 @@
 		class="DSTAProject.model.Characters">
 	</bean>
 	
-	<!-- - 
-	
-	<bean id="richiesta"
-		class="followMeWeb.model.Richiesta">
+	<bean id="story_point"
+		class="DSTAProject.model.Story_Point">
 	</bean>
 	
-	<bean id="amicizia"
-		class="followMeWeb.model.Amicizia">
+	<bean id="progresses"
+		class="DSTAProject.model.Progresses">
 	</bean>
 	
-	<bean id="bloccato"
-		class="followMeWeb.model.Bloccato">
-	</bean>
 	
-	<bean id="traccia"
-		class="followMeWeb.model.Traccia">
-	</bean> -->
-	
-	<!-- Register @Autowired annotation 
-	<bean
-		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
--->
 </beans>
