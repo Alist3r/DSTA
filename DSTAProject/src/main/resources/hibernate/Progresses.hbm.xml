@@ -3,9 +3,9 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 21-mag-2014 12.24.50 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="DSTAProject.model.Story_Point" table="story_point" catalog="DSTAProjectDB">
-        <id name="idStoryPoint" type="java.lang.Integer">
-            <column name="idUsers" />
+    <class name="DSTAProject.model.Progresses" table="Progresses" catalog="DSTAProjectDB">
+        <id name="idProgresses" type="java.lang.Integer">
+            <column name="idProgresses" />
             <generator class="identity" />
         </id>
         <property name="idUsers" type="java.lang.Integer">
@@ -14,8 +14,8 @@
         <property name="idStoryPoint" type="java.lang.Integer">
             <column name="idStoryPoint"/>
         </property>
-        <property name="page" type="string">
-            <column name="page" length="30" />
+        <property name="idPages" type="java.lang.Integer">
+            <column name="idPages"/>
         </property>
     </class>
 </hibernate-mapping>

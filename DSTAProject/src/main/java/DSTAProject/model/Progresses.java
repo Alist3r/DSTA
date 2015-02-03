@@ -7,7 +7,7 @@ public class Progresses implements java.io.Serializable {
 	Integer idProgresses = 0;
 	Integer idUsers = 0;
 	Integer idStoryPoint = 0;
-	String page = "";
+	Integer idPages = 0;
 	
 	public Progresses() {
 		
@@ -37,13 +37,15 @@ public class Progresses implements java.io.Serializable {
 		this.idStoryPoint = idStoryPoint;
 	}
 
-	public String getPage() {
-		return page;
+	public Integer getIdPages() {
+		return idPages;
 	}
 
-	public void setPage(String page) {
-		this.page = page;
+	public void setIdPages(Integer idPages) {
+		this.idPages = idPages;
 	}
+
+	
 	
 	
 }

@@ -76,7 +76,7 @@ public class ProgressesDaoImpl implements ProgressesDao {
 		return null;
 	}
 
-	@Override
+	@Transactional
 	public Progresses getByUserId(int idUser) {
 		session = sessionFactory.openSession();
 
@@ -84,7 +84,7 @@ public class ProgressesDaoImpl implements ProgressesDao {
 
 		Query query = session.createQuery(hql);
 
-		query.setParameter("idUsers", idUser);
+		query.setParameter("idUser", idUser);
 
 		@SuppressWarnings("unchecked")
 		List<Progresses> progressFound = (List<Progresses>) query.list();

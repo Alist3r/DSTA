@@ -125,7 +125,9 @@
 							ANIME: 9999
 						</td>
 						<td class="tdNavBar" style="border-right: none; text-align: center;">
-							<button id="inventario" class="customNavButton"><%= character.getName() %></button>
+							<% if (!character.getName().equals("Unknown")) { %>
+								<button id="inventario" class="customNavButton"><%= character.getName() %></button>
+							<% } %>
 						</td>
 						<td> <i id="controlMusic" style="color:white; cursor:pointer;" class="fa fa-volume-up"></i> <a></a>
 					</tr>
@@ -134,8 +136,7 @@
 		 	
 		 	
 		 	<div id="paginaPrincipale" style="border: 1px solid black; width: 38%; margin: 0 auto; margin-top: 10px; height: 87%">
-		 		
-		 		<jsp:include page="story/begin/createCharacter.jsp"></jsp:include>
+		 		<jsp:include page="${page}"></jsp:include>
 		 	
 		 	</div>
 		 	

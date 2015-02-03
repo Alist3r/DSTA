@@ -1,7 +1,6 @@
 package DSTAProject.bo.impl;
 
 import DSTAProject.bo.StoryPointBo;
-import DSTAProject.dao.CharactersDao;
 import DSTAProject.dao.StoryPointDao;
 import DSTAProject.model.Story_Point;
 

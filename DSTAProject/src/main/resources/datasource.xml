@@ -41,6 +41,7 @@
 				<value>/hibernate/Characters.hbm.xml</value>
 				<value>/hibernate/Story_Point.hbm.xml</value>
 				<value>/hibernate/Progresses.hbm.xml</value>
+				<value>/hibernate/Pages.hbm.xml</value>
 
 			</list>
 		</property>
@@ -79,6 +80,10 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
+	<bean id="pagesDao"
+		class="DSTAProject.dao.impl.PagesDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 	
 	<!-- ********************************************************* -->
 	<!-- ** BO BEAN ** -->
@@ -104,6 +109,11 @@
 		<property name="storyPointDao" ref="storyPointDao" />
 	</bean>
 	
+	<bean id="pagesBo"
+		class="DSTAProject.bo.impl.PagesBoImpl">
+		<property name="pagesDao" ref="pagesDao" />
+	</bean>
+	
 	<!-- ********************************************************* -->
 	<!-- ** BEAN ** -->
 	<!-- ********************************************************* -->
@@ -122,6 +132,10 @@
 	
 	<bean id="progresses"
 		class="DSTAProject.model.Progresses">
+	</bean>
+	
+	<bean id="pages"
+		class="DSTAProject.model.Pages">
 	</bean>
 	
 	

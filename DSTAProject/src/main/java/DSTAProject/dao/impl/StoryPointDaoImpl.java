@@ -64,7 +64,7 @@ public class StoryPointDaoImpl implements StoryPointDao {
 
 		Query query = session.createQuery(hql);
 
-		query.setParameter("idStoryPoint", storyPointId);
+		query.setParameter("storyPointId", storyPointId);
 
 		@SuppressWarnings("unchecked")
 		List<Story_Point> pointFound = (List<Story_Point>) query.list();

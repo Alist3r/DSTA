@@ -62,7 +62,7 @@ public class CharactersDaoImpl implements CharactersDao {
 	}
 
 
-	@Override
+	@Transactional
 	public Characters getByEmail(String email) {
 		
 		session = sessionFactory.openSession();
