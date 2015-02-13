@@ -1,0 +1,355 @@
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+	font-family:'Open Sans Condensed', sans-serif;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.divCentered {
+	margin: 0 auto;
+}
+
+.divCenterText {
+	text-align: center;
+}
+
+/**** HEADER ****/
+
+.headerDiv {
+	border-bottom: 5px  #912b3d; 
+	height: 120px; 
+	background-color: white;
+}
+
+.headerTable {
+	margin: 0 auto;
+	height: 90%;
+	width: 100%;
+}
+
+.logoTd {
+	vertical-align: bottom;
+}
+
+.linkTd {
+  color: #912b3d;
+  cursor: pointer; 
+  text-align: right;
+  font-size: 18px;
+  border-top: none;
+  padding-right: 5px;
+  padding-left: 5px;
+  
+  -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;  
+}
+
+.linkTd:hover {
+	
+	-webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    
+    -webkit-transform: translateX(+10px);
+  	-moz-transform: translateX(+10px);
+  	-o-transform: translateX(+10px);
+  	-ms-transform: translateX(+10px);
+  	transform:translateX(+10px);*/
+}
+
+/**** MENU LEFT ***/
+
+.tdMenu {
+	  cursor: pointer; 
+	  font-size: 18px;
+	  border-top: none;
+	  padding-right: 5px;
+	  padding-left: 5px;
+	  border-left: 5px solid #912b3d;
+	  width: 100%;
+	  background-color: #f1cf8f; 
+	  color: black;
+	  text-align: left;
+	  
+	  -webkit-transition: all .3s;
+    	-moz-transition: all .3s;
+	    	transition: all .3s;  
+}
+
+.tdMenuTitle {
+	text-align: center;
+	background-color: #912b3d; 
+	border:none;
+	font-size: 18px;
+	color: white;
+}
+
+.tdMenu:hover {
+	
+	-webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    
+    -webkit-transform: translateX(-10px);
+	-moz-transform: translateX(-10px);
+	-o-transform: translateX(-10px);
+	-ms-transform: translateX(-10px);
+	transform:translateX(-10px);
+}
+
+/**** NAV BAR ****/
+
+.navBarDiv {
+	width:100%; 
+	margin: 0 auto; 
+	margin-top: 5px; 
+}
+
+.navTable {
+	width: 100%; 
+	border-collapse: collapse;
+}
+
+ .tdNavBar {
+  background-color: #912b3d;
+  color: white;
+  cursor: pointer;
+  height: 35px;  
+  text-align: center;
+  width: 150px;
+  
+  
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s; 
+  
+  	
+}
+
+
+ 	.tdNavBar:hover {	
+ 		background-color: #cd3e57;
+		
+		-webkit-transition: all .2s;
+	    -moz-transition: all .2s;
+	    transition: all .2s; 
+	   
+ 	}
+ 	
+.tdNavBarSpot {
+	background-color: #cd3e57;
+	border-left: 5px solid white;
+	
+	-webkit-transition: all .2s;
+  	-moz-transition: all .2s;
+  	transition: all .2s; 
+}
+
+	.tdNavBarSpot:hover {
+		background-color: #912b3d;
+		
+		-webkit-transition: all .2s;
+	  	-moz-transition: all .2s;
+	  	transition: all .2s; 
+	}
+
+	
+/** PROMO **/	
+
+
+.arrow {
+	position: relative;
+    content: '';
+    width: 0;
+    height: 0;
+    left: 210px;
+    top: 110px;
+    
+    border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 40px solid #912b3d;
+}
+
+.promoHeaderDiv {
+	background-color: #912b3d; 
+	width:200px; 
+	padding:0px; 
+	height: 300px; 
+	vertical-align: top; 
+	float: left; 
+	color: white; 
+	text-align: center; 
+	padding-left: 5px; 
+	padding-right: 5px;
+	margin-bottom: 10px;
+}
+	
+.promoDiv {
+	background-color: white; 
+	width:790px; 
+	padding:0px; 
+	height: 300px; 
+	vertical-align: center; 
+	float: left; 
+	color: white
+}	
+
+.promoInsTab {
+	text-align: center; 
+	width: 100%;
+	height: 300px;
+	background-color: #f1cf8f;
+	color: white;
+	border-left:8px solid white;
+	margin: 0px;
+}
+
+.promoInsTabTitle {
+	color: #912b3d;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.promoInsTabAggiungi {
+	color: white;
+	background-color: #912b3d;
+	height: 40px;
+}
+
+.promoInsTabPrezzo {
+	color: black;
+	font-size: 35px;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+	text-align: right;
+	width: 60%;
+	height: 40px;
+}
+
+.promoInsTabPrezzoOld {
+	color: black;
+	font-size: 16px;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+	text-align: left;
+	width: 37%;
+	height: 40px;
+	text-decoration: line-through;
+	padding-left: 5px;
+}
+	
+#promoCarousel .item{
+    display:block;
+    height: auto;
+}
+
+/******** INFO *********/
+
+.infoDivContainer {
+	width:100%; 
+	float: left; 
+	margin-bottom: 20px;
+}
+
+.infoDiv {
+	width: 330px; 
+	height: 100%; 
+	border-right: 5px solid white;
+	background-color:;
+	float: left;
+}
+
+.infoTable {
+	border-collapse: collapse;
+	background-color: #f1cf8f;
+	
+	/*-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;*/
+}
+
+.infoTableTdTitle {
+	color: black; 
+	text-align: center; 
+	height: 60px; 
+	width: 330px; 
+	vertical-align: bottom; 
+	font-size: 27px; 
+}
+
+.infoTableTdDesc {
+	color: black; 
+	text-align: center; 
+	height: 60px; 
+	width: 330px; 
+	font-size: 16px; 
+	font-weight: bold; 
+	vertical-align: top; 
+	padding:10px; 
+	padding-top: 0px;
+}
+
+.infoTableTdLink {
+	background-color: #912b3d; 
+	width: 330px; 
+	height: 40px; 
+	vertical-align: middle; 
+	color: white; 
+	text-align: center;
+	
+	/*-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;*/
+}
+
+ 	
+/******** FOOTER *********/	
+
+.wrapper {
+	width: 1000px;
+	height: 100%;
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -55px; 
+}
+.footer {
+	height: 50px;	
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 15px;
+	clear: both;
+	color: #912b3d;
+	background-color: white;
+	text-align: center;
+	border-top: 5px solid #912b3d;
+}
+
+.push {
+	height: 50px;
+}
+
+/** CAROUSEL IMG PRINCIPALE **/
+
+.carouselDiv {
+	margin: 10px auto;
+	width: 100%;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+

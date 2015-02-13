@@ -34,7 +34,7 @@
 			 	<jsp:include page="componenti/header.jsp"></jsp:include>
 			 
 			 	
-			 	<form action="doLogin.htm" method="POST">	
+			 	<form action="story/begin/create.htm" method="POST">	
 			 	
 				 	<div id="loginDiv" style="margin: 0 auto; margin-top: 380px;">
 				 		<table style="margin: 0 auto">
