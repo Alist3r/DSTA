@@ -38,10 +38,7 @@
 			<list>
 
 				<value>/hibernate/Users.hbm.xml</value>
-				<value>/hibernate/Characters.hbm.xml</value>
-				<value>/hibernate/Story_Point.hbm.xml</value>
-				<value>/hibernate/Progresses.hbm.xml</value>
-				<value>/hibernate/Pages.hbm.xml</value>
+
 
 			</list>
 		</property>
@@ -65,25 +62,6 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<bean id="charactersDao"
-		class="DSTAProject.dao.impl.CharactersDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
-	
-	<bean id="progressesDao"
-		class="DSTAProject.dao.impl.ProgressesDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
-	
-	<bean id="storyPointDao"
-		class="DSTAProject.dao.impl.StoryPointDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
-	
-	<bean id="pagesDao"
-		class="DSTAProject.dao.impl.PagesDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
 	
 	<!-- ********************************************************* -->
 	<!-- ** BO BEAN ** -->
@@ -94,25 +72,6 @@
 		<property name="usersDao" ref="usersDao" />
 	</bean>
 	
-	<bean id="charactersBo"
-		class="DSTAProject.bo.impl.CharactersBoImpl">
-		<property name="charactersDao" ref="charactersDao" />
-	</bean>
-	
-	<bean id="progressesBo"
-		class="DSTAProject.bo.impl.ProgressesBoImpl">
-		<property name="progressesDao" ref="progressesDao" />
-	</bean>
-	
-	<bean id="storyPointBo"
-		class="DSTAProject.bo.impl.StoryPointBoImpl">
-		<property name="storyPointDao" ref="storyPointDao" />
-	</bean>
-	
-	<bean id="pagesBo"
-		class="DSTAProject.bo.impl.PagesBoImpl">
-		<property name="pagesDao" ref="pagesDao" />
-	</bean>
 	
 	<!-- ********************************************************* -->
 	<!-- ** BEAN ** -->
@@ -122,21 +81,6 @@
 		class="DSTAProject.model.Users">
 	</bean>
 	
-	<bean id="characters"
-		class="DSTAProject.model.Characters">
-	</bean>
-	
-	<bean id="story_point"
-		class="DSTAProject.model.Story_Point">
-	</bean>
-	
-	<bean id="progresses"
-		class="DSTAProject.model.Progresses">
-	</bean>
-	
-	<bean id="pages"
-		class="DSTAProject.model.Pages">
-	</bean>
 	
 	
 </beans>

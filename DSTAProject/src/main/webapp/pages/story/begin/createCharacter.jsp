@@ -1,5 +1,0 @@
-<html>
-
-	CREA PERSONAGGIO
-
-</html>

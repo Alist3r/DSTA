@@ -1,3 +1,3 @@
 <div class="header" id="header"> 
-	T E X T Souls - Dark Souls Text Adventure Edition
+	I n f i n i t y GDR - A Diablo Souls Adventure
 </div>

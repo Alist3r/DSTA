@@ -24,7 +24,6 @@
 	
 	<bean name="/login.htm" class="DSTAProject.servlet.LoginServlet" />
 	<bean name="/index.htm" class="DSTAProject.servlet.HomeServlet" />
-	<bean name="/personaggio.htm" class="DSTAProject.servlet.PersonaggioServlet" />
 	
 	
 </beans>
