@@ -62,15 +62,15 @@ public class UsersDaoImpl implements UsersDao {
 	}
 
 	@Transactional
-	public Users checkLogin(String email, String psw) {
+	public Users checkLogin(String username, String psw) {
 
 		session = sessionFactory.openSession();
 
-		String hql = "FROM Users Tab WHERE Tab.email= :email AND Tab.psw= :psw";
+		String hql = "FROM Users Tab WHERE Tab.username= :username AND Tab.psw= :psw";
 
 		Query query = session.createQuery(hql);
 
-		query.setParameter("email", email);
+		query.setParameter("username", username);
 		query.setParameter("psw", psw);
 
 		@SuppressWarnings("unchecked")

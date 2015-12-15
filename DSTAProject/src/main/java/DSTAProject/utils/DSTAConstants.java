@@ -8,6 +8,6 @@ public class DSTAConstants {
 	
 	//PARAMETRI USERS
 	public static final String PARAM_PSW = "p_password";
-	public static final String PARAM_EMAIL = "p_email";
+	public static final String PARAM_USERNAME = "p_username";
 	
 }

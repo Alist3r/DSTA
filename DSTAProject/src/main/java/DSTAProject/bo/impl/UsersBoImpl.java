@@ -25,8 +25,8 @@ public class UsersBoImpl implements UsersBo{
 		usersDao.delete(user);
 	}
 	
-	public Users checkLogin(String email, String psw) {
-		return usersDao.checkLogin(email, psw);
+	public Users checkLogin(String username, String psw) {
+		return usersDao.checkLogin(username, psw);
 	}
 
 }

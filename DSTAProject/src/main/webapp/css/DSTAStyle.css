@@ -15,15 +15,23 @@ a {
 	text-decoration: none;
 }
 
-.divCenterText {
+	a:hover {
+		text-decoration: underline;
+	}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.div-center-Text {
 	text-align: center;
 }
 
-.divCentered {
+.div-centered {
 	margin: 0 auto;
 }
 
-.customInput {
+.custom-input {
 	border: none;
 	border-bottom: 1px solid black;
 	width: 280px;
@@ -32,13 +40,13 @@ a {
 	font-family:'Open Sans Condensed', sans-serif;
 }
 
-.loginButton {
+.index-button {
 	border: none; 
 	cursor: pointer; 
 	font-size: 30px;
 }
 
-.customButton {
+.custom-button {
 	color: black;
 	border: 1px solid black;
 	background-color: white;
@@ -48,109 +56,31 @@ a {
 	font-family:'Open Sans Condensed', sans-serif;
 	font-size: 15px;
 	
-	-webkit-transition: color .4s, background-color .4s;
-    -moz-transition: color .4s,background-color .4s;
-    transition: color .4s, background-color .4s;
 }
 
-	.customButton:HOVER {
+	.custom-button:HOVER {
 		background-color: black;
 		color:white;
-		
-		-webkit-transition: color .4s, background-color .4s;
-	    -moz-transition: color .4s,background-color .4s;
-	    transition: color .4s, background-color .4s;
-	}
-	
-.customNavButton {
-	color: white;
-	border: 1px solid white;
-	background-color: black;
-	cursor: pointer;
-	outline: none;
-	width: 120px;
-	font-family:'Open Sans Condensed', sans-serif;
-	font-size: 15px;
-	
-	-webkit-transition: color .4s, background-color .4s;
-    -moz-transition: color .4s,background-color .4s;
-    transition: color .4s, background-color .4s;
-}
 
-	.customNavButton:HOVER {
-		background-color: white;
-		color: black;
-		
-		-webkit-transition: color .4s, background-color .4s;
-	    -moz-transition: color .4s,background-color .4s;
-	    transition: color .4s, background-color .4s;
 	}
+	
+
 	
 .header {
-	border-bottom: 1px solid  black;
+	border-bottom: 1px solid  #fff;
 	padding-left: 10px;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	text-align: center;
+	text-align: left;
 	font-size: 20px;
-}
-
-.tdNavBar {
-	font-size: 15px; 
-	width: 200px; 
-	color: white; 
-	padding-left: 3px; 
-	border-right: 1px solid white; 
-	text-align: center;
+	color: #fff;
+	background-color: #000;
 }
 
 
-/******* SEZIONE PERSONAGGIO ********/
 
-.tablePersonaggio {
-	width: 100%; 
-	border-collapse: collapse;
-}
 
-	.tdInfoHeader {
-		background-color: black; 
-		color: white; 
-		text-align: center; 
-		width: 22%;
-	}
-	
-	.tdInfoDati {
-		text-align: center; 
-		width: 22%; 
-		border-bottom: 1px dotted black;
-	}
-	
-	.tdEquipHeader {
-		text-align: center; 
-		border-bottom: 1px solid black; 
-		border-top: 1px solid black; 
-		color: white; 
-		background-color: black;
-	}
-	
-	.tdInvetDati {
-		border-bottom: 1px dotted black; 
-		text-align: right; 
-		font-size: 14px;
-	}
 
-.innerTablePersonaggio {
-	width: 80%; 
-	border-collapse:collapse; 
-	margin: 0 auto;	
-}
-	
-	.innerTablePersonaggio td {
-		border-bottom: 1px dotted black;
-
-	}
-	
-/******* FINE SEZIONE PERSONAGGIO ********/
 	
 	
 /******** FOOTER *********/	
@@ -178,6 +108,7 @@ a {
 	height: 1px;
 }
 /******** FINE FOOTER *********/
+
 
 /******** DIALOG ********/
 .ui-dialog {

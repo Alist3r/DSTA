@@ -24,24 +24,25 @@ public class UsersController {
 	
 	
 	//PROCEDURA DI LOGIN
-	@RequestMapping(value = "pages/story/begin/create", method = RequestMethod.POST)
+	@RequestMapping(value = "doLogin", method = RequestMethod.POST)
 	public ModelAndView login(
-			@RequestParam(DSTAConstants.PARAM_EMAIL) String email,
+			@RequestParam(DSTAConstants.PARAM_USERNAME) String username,
 			@RequestParam(DSTAConstants.PARAM_PSW) String psw, 
 			Model model) {
 
 		try {
 			
 			//CERCO L'UTENTE NEL DATABASE
-			Users user = usersBo.checkLogin(email, psw);
+			Users user = usersBo.checkLogin(username, psw);
 			
 			//SE TROVO L'UTENTE
 			if (user != null) {
 							
 				    
 					//model.addAttribute("page", pageName);
-
-					return new ModelAndView("/story/begin/createCharacter");
+					
+					model.addAttribute("msg","OK");
+					return new ModelAndView("login");
 
 			} 
 			//SE NON TROVO NESSUN UTENTE RESTITUISCO MESSAGGIO DI ERRORE

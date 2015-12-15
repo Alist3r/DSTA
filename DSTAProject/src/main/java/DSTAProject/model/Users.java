@@ -5,7 +5,7 @@ public class Users implements java.io.Serializable {
 	private static final long serialVersionUID = -7251652590769319883L;
 
 	private Integer idUsers = 0;
-	private String email = null;
+	private String username = null;
 	private String psw = null;
 
 	public Users() {
@@ -13,7 +13,7 @@ public class Users implements java.io.Serializable {
 
 	public Users(String email,String psw) {
 		this.psw = psw;
-		this.email = email;
+		this.username = email;
 	}
 
 	public Integer getIdUsers() {
@@ -24,12 +24,12 @@ public class Users implements java.io.Serializable {
 		this.idUsers = idUsers;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPsw() {
@@ -44,7 +44,7 @@ public class Users implements java.io.Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		result = prime * result
 				+ ((idUsers == null) ? 0 : idUsers.hashCode());
 		result = prime * result + ((psw == null) ? 0 : psw.hashCode());
@@ -60,10 +60,10 @@ public class Users implements java.io.Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Users other = (Users) obj;
-		if (email == null) {
-			if (other.email != null)
+		if (username == null) {
+			if (other.username != null)
 				return false;
-		} else if (!email.equals(other.email))
+		} else if (!username.equals(other.username))
 			return false;
 		if (idUsers == null) {
 			if (other.idUsers != null)
@@ -81,7 +81,7 @@ public class Users implements java.io.Serializable {
 	@Override
 	public String toString() {
 		return String.format("Users [idUtente=%s, email=%s, psw=%s]", idUsers,
-				email, psw);
+				username, psw);
 	}
 
 	

@@ -19,8 +19,6 @@
 	
 		$(document).ready(function() {
 			
-			$('#mainDiv').fadeIn(2000);
-			$('#footer').fadeIn(2000);
 			
 		});
 		
@@ -29,27 +27,29 @@
 	<body>
 		<div class="wrapper">
 		
-	 		<div id="mainDiv" hidden="hidden">
+	 		<div id="mainDiv">
 			 	
 			 	<jsp:include page="componenti/header.jsp"></jsp:include>
-			 
-			 	
-			 	<form action="story/begin/create.htm" method="POST">	
+			 			 	
+			 	<form action="doLogin.htm" method="POST">	
 			 	
 				 	<div id="loginDiv" style="margin: 0 auto; margin-top: 380px;">
 				 		<table style="margin: 0 auto">
 				 			<tr>
-				 				<td colspan="2"> <input name="<%= DSTAConstants.PARAM_EMAIL %>" id="emailInput" class="customInput" placeholder="E-Mail Address"> </td>
+				 				<td style="width: 20px;"><i class="fa fa-user"></i></td>
+				 				<td colspan="2"> <input name="<%= DSTAConstants.PARAM_USERNAME %>" id="usernameInput" class="custom-input" placeholder="Username"> </td>
 				 			</tr>
 				 			<tr>
-				 				<td colspan="2"> <input name="<%= DSTAConstants.PARAM_PSW %>" type="password" id="passwordInput" class="customInput" placeholder="Password"> </td>
+				 				<td style="width: 20px;"><i class="fa fa-lock"></i></td>
+				 				<td colspan="2"> <input name="<%= DSTAConstants.PARAM_PSW %>" type="password" id="passwordInput" class="custom-input" placeholder="Password"> </td>
 				 			</tr>
 				 			<tr>
-				 				<td> <button type="submit" class="customButton" id="doLogin">L O G I N</button> </td>
+				 				<td></td>
+				 				<td> <button type="submit" class="custom-button" id="doLogin">L O G I N</button> </td>
 				 				<td style="text-align: right;"> <a href="#">Registrati</a> </td>
 				 			<tr>
 				 		</table>
-				 		<div class="divCenterText">${msg}</div>
+				 		<div class="div-center-Text">${msg}</div>
 				 	</div>
 				 </form>
 				 

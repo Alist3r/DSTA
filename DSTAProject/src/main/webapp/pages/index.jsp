@@ -34,16 +34,16 @@
 		<div class="wrapper"> 
 		
 		 	<div id="titleDiv" hidden="hidden">
-			 	<div class="divCenterText" style="font-size: 60px; padding-top: 200px; font-family: 'Playfair Display', serif;">
+			 	<div class="div-center-Text" style="font-size: 60px; padding-top: 200px; font-family: 'Playfair Display', serif;">
 			 		I n f i n i t y GDR
 			 	</div>
-			 	<div class="divCenterText">
+			 	<div class="div-center-Text">
 			 		A Diablo Souls Adventure
 		 		</div>
 		 	</div>
 		 
-		 	<div class="divCenterText divCentered" id="startButton" hidden="hidden" style="margin-top: 200px; width: 95px;">
-			 		<div id="toLogin" class="loginButton" style="">S t a r t</div>
+		 	<div class="div-center-Text div-centered" id="startButton" hidden="hidden" style="margin-top: 200px; width: 95px;">
+			 		<div id="toLogin" class="index-button" style="">S t a r t</div>
 		 	</div>		
 		 	
 		 	<script>
