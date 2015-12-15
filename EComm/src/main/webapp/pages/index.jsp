@@ -11,6 +11,8 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
+
+			$('#goTopDiv').hide()
 			
 			$("#owl-demo").owlCarousel({
 				 
@@ -21,7 +23,7 @@
 			      autoPlay: 10000,
 			      pagination: true
 			 
-			  });
+	  		});
 
 			$("#promoCarousel").owlCarousel({
 				 
@@ -35,7 +37,28 @@
 			      itemsScaleUp: false,
 			      scrollPerPage: true
 			 
-			  });
+		  	});
+
+
+			$(window).scroll(function()
+				{
+
+					if ($(window).scrollTop() == 0) {
+						$('#goTopDiv').fadeOut(500);
+					}
+					else {
+						$('#goTopDiv').fadeIn(500);
+					}
+					
+				});
+
+
+			$('#goTopDiv').click(function() {
+
+				$("html, body").animate({ scrollTop: 0 }, "slow");
+				
+			});
+			
 		});
 	
 	</script>	
@@ -117,11 +140,15 @@
 			
 			
 		 	<div class="arrow"></div>
+		 	<div id="goTopDiv"><i class="fa fa-angle-up"></i></div>
 		 	
 		 	<jsp:include page="componenti/boxInfo.jsp"></jsp:include>
+		 		 	
+		 	<jsp:include page="componenti/panelInfo.jsp"></jsp:include>
 		 	
 		 	<!-- IL CONTAINER DEI COLLEGAMENTI SOCIAL -->
 		 	<jsp:include page="componenti/boxMedia.jsp"></jsp:include>	
+		 	
 		    
 		 	<div class="push"></div>
 		 		 		

@@ -42,6 +42,7 @@ public class UsersController {
 					//model.addAttribute("page", pageName);
 					
 					model.addAttribute("msg","OK");
+					model.addAttribute(DSTAConstants.SESSION_USER, user);
 					return new ModelAndView("login");
 
 			} 
