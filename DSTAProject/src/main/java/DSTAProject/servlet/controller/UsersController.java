@@ -36,14 +36,10 @@ public class UsersController {
 			Users user = usersBo.checkLogin(username, psw);
 			
 			//SE TROVO L'UTENTE
-			if (user != null) {
-							
-				    
-					//model.addAttribute("page", pageName);
+			if (user != null) {							
 					
-					model.addAttribute("msg","OK");
 					model.addAttribute(DSTAConstants.SESSION_USER, user);
-					return new ModelAndView("login");
+					return new ModelAndView("create");
 
 			} 
 			//SE NON TROVO NESSUN UTENTE RESTITUISCO MESSAGGIO DI ERRORE

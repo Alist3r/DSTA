@@ -65,7 +65,7 @@
 	<%
 	}
 	else {
-		request.getRequestDispatcher("mainPage.jsp").forward(request, response);
+		request.getRequestDispatcher("create.jsp").forward(request, response);
 	}
 	%>
 </html>

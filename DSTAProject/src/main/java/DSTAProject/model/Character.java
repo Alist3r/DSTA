@@ -11,7 +11,7 @@ public abstract class Character implements Serializable  {
 	
 	private Double attacco = (double) 0;
 	private Double difesa = (double) 0;
-	private Double agilita = (double) 0;
+	private Double precisione = (double) 0;
 	private Integer hp = 0;
 	
 	private Integer livello = 1;
@@ -55,11 +55,11 @@ public abstract class Character implements Serializable  {
 	public void setDifesa(Double difesa) {
 		this.difesa = difesa;
 	}
-	public Double getAgilita() {
-		return agilita;
+	public Double getPrecisione() {
+		return precisione;
 	}
-	public void setAgilita(Double agilita) {
-		this.agilita = agilita;
+	public void setPrecisione(Double agilita) {
+		this.precisione = agilita;
 	}
 	public Integer getHp() {
 		return hp;

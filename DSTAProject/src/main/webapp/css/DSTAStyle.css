@@ -77,9 +77,68 @@ input:-webkit-autofill {
 	background-color: #000;
 }
 
+/******* CREATE *********/
+
+.border-guerriero {
+	border-color: #992D15;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.border-mago {
+	border-color: #74B6E5;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.border-ladro {
+	border-color: #E5CE42;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.color-guerriero {
+	color: #992D15;
+}
+
+.color-mago {
+	color: #74B6E5;
+}
+
+.color-ladro {
+	color: #E5CE42;
+}
+
+.class-container {	
+	float:left; 
+	height: 93px; 
+	width: 180px; 
+	background-color: #fff;
+	cursor: pointer;
+	border: none;
+}
 
 
+.class-icon {
+	float:left;
+	padding: 3px; 
+	margin-right: 5px;
+	background-color: #fff;
+}
 
+.class-name {
+	float: left; 
+	font-weight: bold; 
+	letter-spacing: 3px; 
+	width: 68%;	
+	font-size: 25px;
+}
+
+.class-attribute {	
+	font-size: 23px; 
+	float:left; 
+	width: 100%;
+}
 
 	
 	
