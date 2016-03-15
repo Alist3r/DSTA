@@ -4,3 +4,6 @@
 
 <script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
 <script src="../js/myFunction.js" type="text/javascript"></script>
+
+<script type='text/javascript' src='/TxtAdv/dwr/engine.js'></script>
+<script type='text/javascript' src='/TxtAdv/dwr/interface/TxtAdvService.js'></script>

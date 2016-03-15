@@ -33,4 +33,22 @@ public class UtenteDao {
 		
 		return false;
 	}
+	
+	public void setNomeUtente(String nome, String email) {
+		
+		String query = "UPDATE utente SET nome = '" + nome + "' WHERE email = '" + email + "'";
+		
+		Statement st;
+		try {
+			st = (Statement) connessioneDb.getConnessione().createStatement();
+			st.executeUpdate(query);
+			st.close();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+
+		
+	}
 }
