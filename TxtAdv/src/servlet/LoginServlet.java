@@ -24,11 +24,12 @@ public class LoginServlet extends BaseServlet {
 		
 		UtenteDao utenteDao = new UtenteDao();		
 		boolean verificato = utenteDao.checkLogin(email, password);
-	   
+			   
 		if(verificato) {
-			Utente utente = new Utente(email, password);
+			Utente utente = utenteDao.getUtenteDaEmail(email);
 			request.getSession().setAttribute(Costanti.SESSION_UTENTE, utente);
-			response.sendRedirect("start.jsp");	 
+			String pagina = utente.getPagina();
+			response.sendRedirect(pagina);	 
 		}
 		else {
 			response.sendRedirect("index.jsp");	    

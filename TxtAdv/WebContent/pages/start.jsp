@@ -28,7 +28,7 @@
 			$('#nextButton').click(function() {
 
 				if(numPrologo == 2) {
-					var url = 'in-gabbia.jsp'
+					var url = 'In-Gabbia'
 					
 					window.location.href = url;
 			        return false;
@@ -80,7 +80,9 @@
 		
 		</div>
 		
-		<jsp:include page="../pages/componenti/footer.jsp"></jsp:include>
+		<div id="footer" class="footer" style="text-align: center;">
+			<p>Ver 1.0</p>
+		</div> 
 		
 	</body>
 

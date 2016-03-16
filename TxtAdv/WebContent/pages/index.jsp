@@ -41,7 +41,9 @@
 		
 		</div>
 		
-		<jsp:include page="../pages/componenti/footer.jsp"></jsp:include>
+		<div id="footer" class="footer" style="text-align: center;">
+			<p>Ver 1.0</p>
+		</div> 
 		
 	</body>
 

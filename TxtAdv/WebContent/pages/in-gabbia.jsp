@@ -79,7 +79,21 @@
 		
 		</div>
 		
-		<jsp:include page="../pages/componenti/footer.jsp"></jsp:include>
+		<div id="footer" class="footer" style="text-align: center;">
+		
+			<div class="autoMargin divInternoFooter">
+				<table class="tableFooter">
+					<tr>
+						<td style="background-color: #fff; color: #000; padding: 4px;"> <%= utente.getNome() %>
+						<td> Livello: <%= utente.getLivello() %> </td>
+						<td> <a>Inventario</a> </td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<br>
+			<p>Ver 1.0</p>
+		</div> 
 		
 	</body>
 
